@@ -5,7 +5,7 @@
     </figure>
     <div class="column is-half is-offset-one-quarter">
       <span class="tag is-warning is-light">
-        Desenvolvido por @Miller202 (github)
+        developed by @Miller202 (github)
       </span>
       <input type="text" class="input is-rounded" placeholder="buscar pokémon pelo nome" v-model="busca">
       <button class="button is-medium is-fullwidth is-warning is-light" id="BuscaBtn" @click="buscar()">

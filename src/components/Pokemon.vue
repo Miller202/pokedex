@@ -20,7 +20,7 @@
 
         <div class="content">
           <button id="but" class="button is-medium is-fullwidth" @click="mudarSprite()">
-            Virar pokémon (Frente/Costas)</button>
+            Flip the pokémon (Front/Back)</button>
         </div>
       </div>
     </div>
