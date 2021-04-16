@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <figure id="logo">
+    <img src="./assets/Pokedex-Logo.png" class="sizelogo"/>
+    </figure>
     <div class="column is-half is-offset-one-quarter">
       <div v-for="(poke, index) in pokemons" :key="index">
         <Pokemon :name="poke.name" :url="poke.url" :num="index+1"/>
@@ -39,4 +42,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
 </style>

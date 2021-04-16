@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-image">
         <figure>
-          <img :src="pokemon.front" alt="Placeholder image"/>
+          <img :src="currentImg" alt="Placeholder image"/>
         </figure>
       </div>
       <div class="card-content">
@@ -15,6 +15,8 @@
         </div>
 
         <div class="content">
+          <button id="but" class="button is-medium is-fullwidth" @click="mudarSprite()">
+            Virar pokémon (Frente/Costas)</button>
         </div>
       </div>
     </div>
@@ -29,11 +31,14 @@ export default {
       this.pokemon.type = res.data.types[0].type.name;
       this.pokemon.front = res.data.sprites.front_default;
       this.pokemon.back = res.data.sprites.back_default;
+      this.currentImg = this.pokemon.front;
       console.log(this.pokemon);
     });
   },
   data() {
     return {
+      is_front: true,
+      currentImg: '',
       pokemon: {
           type: '',
           front: '',
@@ -52,6 +57,18 @@ export default {
       return newName;
     },
   },
+  methods: {
+    mudarSprite: function(){
+      if(this.is_front){
+        this.is_front = false;
+        this.currentImg = this.pokemon.back;
+      }
+      else{
+        this.is_front = true;
+        this.currentImg = this.pokemon.front;
+      }
+    }
+  }
 };
 </script>
 
@@ -59,6 +76,10 @@ export default {
 
 #pokemon{
   margin-top: 2%;
+}
+
+#but {
+  background-color:goldenrod;
 }
 
 </style>
