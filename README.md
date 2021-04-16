@@ -8,16 +8,16 @@
 * Bulma Framework; 
 * Pokeapi.
 
-## O projeto está hospedado na plataforma Heroku:
+**O projeto está hospedado na plataforma Heroku:**
 * https://find-on-pokedex.herokuapp.com/
 
 
-## Como instalar o projeto:
+**Como instalar o projeto:**
 ```
 npm install
 ```
 
-### Como executar na sua máquina (localhost:8080):
+**Como executar na sua máquina (localhost:8080):**
 ```
 npm run serve
 ```
