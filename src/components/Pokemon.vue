@@ -10,7 +10,11 @@
         <div class="media">
           <div class="media-content">
             <p class="title is-4">{{ num }} - {{ name | upper }}</p>
-            <p class="subtitle is-6">{{ pokemon.type }}</p>
+            <p class="subtitle is-5">Type: {{ pokemon.type }}</p>
+            <p class="subtitle is-5">HP: {{ pokemon.hp }}</p>
+            <p class="subtitle is-6">Attack: {{ pokemon.attack }} |--| Defense: {{ pokemon.defense }}</p>
+            <p class="subtitle is-6">Special Attack: {{ pokemon.specialAt }} |--|
+               Special Defense: {{ pokemon.specialDef}}</p>
           </div>
         </div>
 
@@ -29,10 +33,15 @@ export default {
   created() {
     axios.get(this.url).then((res) => {
       this.pokemon.type = res.data.types[0].type.name;
+      this.pokemon.hp = res.data.stats[0].base_stat;
+      this.pokemon.attack = res.data.stats[1].base_stat;
+      this.pokemon.defense = res.data.stats[2].base_stat;
+      this.pokemon.specialAt = res.data.stats[3].base_stat;
+      this.pokemon.specialDef = res.data.stats[4].base_stat;
       this.pokemon.front = res.data.sprites.front_default;
       this.pokemon.back = res.data.sprites.back_default;
       this.currentImg = this.pokemon.front;
-      console.log(this.pokemon);
+      console.log(this.pokemon.hp);
     });
   },
   data() {
@@ -41,6 +50,11 @@ export default {
       currentImg: '',
       pokemon: {
           type: '',
+          hp: Number,
+          attack: Number,
+          defense: Number,
+          specialAt: Number,
+          specialDef: Number,
           front: '',
           back: ''
       },
