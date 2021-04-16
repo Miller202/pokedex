@@ -1,7 +1,7 @@
 ![alt](https://cdn0.iconfinder.com/data/icons/pokemon-1/64/cat_cartoon_character_pokemon-128.png) 
 # Pokedex
 
-**Implementação de um catálogo de pokemons (pokedex).**
+**Implementação de um catálogo de pokémons (pokedex).**
 **Tecnologias utilizadas:**
 * Vue.js;
 * Axios;
