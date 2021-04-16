@@ -2,15 +2,15 @@
 # Pokedex
 
 **Implementação de um catálogo de pokémons (pokedex).**
+
+**O projeto está hospedado na plataforma Heroku:**
+* https://find-on-pokedex.herokuapp.com/
+
 **Tecnologias utilizadas:**
 * Vue.js;
 * Axios;
 * Bulma Framework; 
 * Pokeapi.
-
-**O projeto está hospedado na plataforma Heroku:**
-* https://find-on-pokedex.herokuapp.com/
-
 
 **Como instalar o projeto:**
 ```
