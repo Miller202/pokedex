@@ -4,7 +4,7 @@
 **Implementação de um catálogo de pokémons (pokedex).**
 
 **O projeto está hospedado na plataforma Heroku:**
-* https://find-on-pokedex.herokuapp.com/
+* https://find-on-pokedex.herokuapp.com/ -- F Heroku :( --
 
 **Tecnologias utilizadas:**
 * Vue.js;
